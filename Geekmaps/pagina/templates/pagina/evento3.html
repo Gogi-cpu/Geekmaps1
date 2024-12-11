@@ -1,0 +1,45 @@
+{% extends "pagina/index.html" %}
+{% load static %}
+{%block content%}
+
+<style>
+
+body{
+  background: url("/static/img/fondo2.png")50% fixed;
+  color:rgb(56, 8, 74);
+  font-family:monospace;
+  font-size: 20px;
+  
+  }
+#informacion{
+    margin: 15px;
+}  
+#imagen{
+    margin: 40px;
+    margin-bottom: 100px;
+    height: 150px;
+    
+}
+</style>
+<body>
+    <div class="row"> 
+        <div id="imagen" class="col-md-6" >
+            <img class="card-img-top" src="{% static 'img/evento3.png' %}" alt="Card image cap"style="margin-bottom: 200px;">
+        </div>
+        <div id="informacion" class="col-md-5">
+            <h4>Feria de ilustración,arte y diseño</h4>
+            <h2>"Maneki Neko Matsuri"</h2>
+            <ul>
+                <li>Fecha: 30 de Noviembre al 01 Diciembre</li>
+                <li>Hora: 11:30 a 20:00 hrs</li>
+                <li>Tipo de evento: Ilustración</li>
+                <li>Entrada: Gratuita</li>
+                <li>Dirección: Plaza Pedro de Valdivia</li>
+                <li>Comuna: Providencia</li>
+                <li>Organiza: Safari Colectivo</li>
+            </ul>
+        <div class="col-md-1"></div>
+        </div>
+
+</body>
+{%endblock%}

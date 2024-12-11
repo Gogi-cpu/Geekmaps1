@@ -1,0 +1,48 @@
+{% extends "pagina/index.html" %}
+
+{%block content%}
+<style>
+
+body{
+
+    background: url("/static/img/fondo2.png")50% fixed;
+    color:rgb(56, 8, 74);
+
+}
+
+
+#tablaMision{
+    border-radius:10px;
+    background-color:rgba(255, 255, 255,0);
+    font-family:monospace;
+    color:rgb(56, 8, 74);
+    font-size:20px;
+    padding:15px;
+    margin: 50px;
+    text-align: justify;
+    max-width: 80%;
+}
+
+</style>
+<body>
+    
+    <div class="row" >
+        <div id="tablaMision">
+            <ul>
+                <li><h3>¿Cómo puedo encontrar ferias cerca de mi ubicación?</h3></li>
+                <p>Puedes utilizar el sistema de filtrado avanzado para encontrar eventos cerca de ti. Solo necesitas seleccionar tu ubicación en el filtro, y la plataforma te mostrará las ferias más cercanas disponibles. También puedes refinar la búsqueda por fecha, tipo de evento (gratis o pagado) y otras categorías para ajustar aún más los resultados.
+                Geek Maps es una plataforma web diseñada para centralizar y mejorar la visibilidad de ferias y eventos de temática geek, especialmente aquellos de menor escala. Su objetivo es conectar a la comunidad geek con eventos cercanos de forma fácil y accesible, ofreciendo un calendario interactivo, opciones de búsqueda avanzada y espacios para que los organizadores publiquen y gestionen sus eventos.</p>
+                <li><h3>¿Es necesario registrarse para ver los eventos?</h3></li>
+                <p>No, puedes ver los eventos sin necesidad de registrarte. Sin embargo, registrarse ofrece ventajas adicionales: podrás guardar tus eventos favoritos, recibir notificaciones sobre eventos futuros. ¡El registro es gratuito y solo toma unos minutos!</p>
+                <li><h3>¿Cómo puedo publicar un evento en Geek Maps?</h3></li>
+                <p>Para publicar un evento, primero debes crear una cuenta en Geek Maps como organizador. Una vez registrado, accede  la opción de “Mis solicitudes”. Allí podrás ingresar los detalles de tu feria o evento, como el nombre, ubicación, fecha, tipo de entrada y una breve descripción. Una vez completado, tu evento se mostrará en el calendario para que otros usuarios puedan verlo. Es una manera rápida y efectiva de dar a conocer tu evento.</p>
+                <li><h3>¿La plataforma es gratuita para los organizadores y asistentes?</h3></li>
+                <p>Sí, Geek Maps es completamente gratuita tanto para los usuarios que buscan eventos como para los organizadores que desean publicar los suyos. La plataforma se financia mediante donaciones y publicidad, lo que permite que todos puedan acceder sin costo.</p>
+                <li><h3>¿Qué tipo de ferias y eventos se pueden publicar en Geek Maps?</h3></li>
+                <p>Geek Maps está pensada para eventos de temática geek en todas sus formas. Puedes publicar eventos como ferias de coleccionismo, convenciones de anime, torneos de videojuegos, exposiciones de cómics, y más. Mientras esté relacionado con la cultura geek, ¡tu evento tiene un lugar en Geek Maps!</p>
+            </ul>
+            
+        </div>
+    </div>  
+</body>
+{%endblock%}

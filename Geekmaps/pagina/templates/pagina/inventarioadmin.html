@@ -1,0 +1,73 @@
+{% extends "pagina/index.html" %}
+
+{%block content%}
+<style>
+    body{
+        background: url("/static/img/fondo.png")50% fixed;
+        color:rgb(0,0,0);
+        margin-bottom: 15%; 
+        }
+
+    #bordetabla{
+        border-radius:10px;
+        background-color:rgba(83, 239, 244, 0.5);
+        padding:15px;
+        margin:45px;
+    }
+    #bordetabla h1{
+        text-align: center;
+
+    }
+    #cabezatabla th{
+        background-color: gray;
+    }
+    #botones {
+        text-align: center;
+        display: center;
+        
+    }
+</style>
+    
+<body>
+    <div id="bordetabla">
+        <h1>Inventario</h1>
+
+        <div >
+            <a href="{% url 'agregar' %}"><input type="button" class="btn btn-success"value="Agregar ítem"> </a>
+            {% if objetos %}
+            <table class="table table-striped table-dark table-hover table-bordered">
+                    
+                <thead id="cabezatabla">
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Disponibles</th>
+                    <th>Ubicacion</th>
+                    <th></th>
+                    <th></th>
+                </thead>
+
+                {% for objeto in objetos %}
+
+                <tr>
+                    <td>{{objeto.id}}</td>
+                    <td>{{objeto.nombre}}</td>
+                    <td>{{objeto.description}}</td>
+                    <td>{{objeto.disponibles}}</td>
+                    <td>{{objeto.ubicacion}}</td>
+                    <td><a href="{% url  'producto_edit' key=objeto.id %}"><input type="button" class="btn btn-warning" value="Modificar ítem"></a></td>
+                    <td><a href="{% url  'producto_del' producto_id=objeto.id %}"><input type="button" class="btn btn-danger"value="Eliminar ítem"></a></td>
+
+                </tr>
+                {% endfor %}
+            </table>
+            {% endif %}
+        </div>
+        </div>
+        
+    </div>
+    
+    
+</body>
+
+{%endblock%}

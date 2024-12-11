@@ -1,0 +1,52 @@
+{% extends "pagina/index.html" %}
+
+{%block content%}
+<style>
+
+body{
+
+    background: url("/static/img/fondo2.png")50% fixed;
+    color:rgb(56, 8, 74);
+    font-family:monospace;
+  }
+
+#lista{
+
+    color:rgb(255,255,255,);
+    display:left;
+    color:rgb(56, 8, 74);
+    font-family:monospace;
+}    
+#mapa{
+    display: right;
+}   
+.row{
+    width: 100%;
+    height: 100%;
+}
+</style>
+
+<body>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div id="Lista" class="col-md-3">
+            <div id="tablaContacto">
+                <p></p>
+                <a href="#"><li></a>Madness Rave!<br></li>
+                <a href="#"><li></a>Feria Friki Torneos Beyblade<br></li>
+                <a href="#"><li></a>Maneki Neko Matsuri<br></li>
+                <a href="#"><li></a>Feria Hanami Otagamer<br></li>
+                <a href="#"><li></a>AEX32<br></li>
+            </div> 
+        </div>    
+        <div id="mapa" class="col-md-8">
+            <div id="maps" >
+                <iframe src="https://www.google.com/maps/d/embed?mid=1i4lVI2WuCfq0joiJDN2qXa8CcEFG0qU&ehbc=2E312F&noprof=1" width="100%" height="800px"></iframe>
+            </div>  
+        </div>                   
+    </div>    
+    
+      
+    </div>    
+</body>
+{%endblock%} 

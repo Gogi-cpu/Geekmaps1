@@ -1,0 +1,63 @@
+{% extends "pagina/index.html" %}
+
+{%block content%}
+<style>
+
+    body{
+        background: url("/static/img/fondo2.png")50% fixed;
+        color:rgb(0,0,0)
+        }
+    
+    #error{
+        font-family:Taviraj;
+        margin:5px;
+        margin-top:100px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        background-color:rgb(255, 255, 255, .5);
+        padding:15px;
+        font-size:20px;
+    }
+
+    body h1{
+
+        align-items: center;
+        margin-top: 10px;
+        text-align:center;
+        font-family:Taviraj;
+    }
+    body h3{
+
+        align-items: center;
+        font-family:Taviraj;
+        margin-top: 10px;
+    }
+    input{
+
+        margin:5px;
+        padding:10px;
+        font-family:Taviraj;
+        text-align:center;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        margin-left:50px;
+    }
+</style>
+
+<body>
+    <div id="error"class="mb-3">
+        <form action="salir_error" method="post">
+
+            <h1>Error en el ingreso</h1>
+            <h3>No se a iniciado sesion</h3>
+            <h3>Por favor volver a intentar</h3>
+            {% csrf_token %}
+            <input type="submit" class="btn btn-info" name ="opcion" value="Volver a ingresar"/>
+            <input type="submit" class="btn btn-info" name ="opcion" value="Volver al inicio" /><br>
+            
+        </form>
+    </div>
+</body>
+{%endblock%} 

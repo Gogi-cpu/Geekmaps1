@@ -1,0 +1,55 @@
+{% extends "pagina/index.html" %}
+
+{%block content%}
+<style>
+
+    body{
+        background: url("/static/img/fondo2.png")50% fixed;
+        color:rgb(56, 8, 74);
+        font-family:monospace;
+        
+        }
+    
+    #formulario{
+        font-family:monospace;
+        margin-top:100px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+    form{
+        font-family:monospace;
+        border-radius:10px;
+        background-color:rgba(66, 138, 219,0.5);
+        padding:15px;
+        font-size:20px;
+       
+    }
+    form h1{
+        margin-top: 10px;
+        text-align:center;
+        font-family:monospace;
+        
+    }
+
+
+</style>
+
+<body>
+    <div id="formulario"class="mb-3">
+        <form action="validar" method="post">
+
+            <h1>Bienvenido al inicio sesión</h1>
+            {% csrf_token %}
+            <label for="usuario" class="form-label">Ingrese su nombre de usuario: </label><br>
+            <input type="text" class="form-control" id="usuario" name="usuario" required/><br>
+
+            <label for="contra" class="form-label">Ingrese su contraseña: </label><br>
+            <input minlength="8" type="password" class="form-control" id="contra" name="contra"  pattern="[A-Za-z0-9]+" required/><br>
+
+            <input id="botton"type="submit" class="btn btn-primary" name ="opcion" value="Ingresar" /><br>
+            
+        </form>
+    </div>
+</body>
+{%endblock%} 

@@ -1,0 +1,45 @@
+{% extends "pagina/index.html" %}
+{% load static %}
+{%block content%}
+
+<style>
+
+body{
+  background: url("/static/img/fondo2.png")50% fixed;
+  color:rgb(56, 8, 74);
+  font-family:monospace;
+  font-size: 20px;
+  
+  }
+#informacion{
+    margin: 15px;
+}  
+#imagen{
+    margin: 40px;
+    margin-bottom: 100px;
+    height: 150px;
+    
+}
+</style>
+<body>
+    <div class="row"> 
+        <div id="imagen" class="col-md-6" >
+            <img class="card-img-top" src="{% static 'img/evento1.png' %}" alt="Card image cap"style="margin-bottom: 200px;">
+        </div>
+        <div id="informacion" class="col-md-5">
+            <h4>Moshi Moshi Club</h4>
+            <h2>"Alice Madness Rave!"</h2>
+            <ul>
+                <li>Fecha: 01 Viernes de Noviembre </li>
+                <li>Hora: 23:00 a 04:45 hrs</li>
+                <li>Tipo de evento: Disco Nocturna</li>
+                <li>Entrada: De Pago</li>
+                <li>Dirección: Vicuña Mackenna 1895</li>
+                <li>Comuna: Centro Santiago</li>
+                <li>Organiza: Moshi Moshi Club</li>
+            </ul>
+        <div class="col-md-1"></div>
+        </div>
+
+</body>
+{%endblock%}

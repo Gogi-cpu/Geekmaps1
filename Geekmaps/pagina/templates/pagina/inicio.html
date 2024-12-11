@@ -1,0 +1,77 @@
+{% extends "pagina/index.html" %}
+{% load static %}
+{%block content%}
+
+<style>
+
+body{
+  background: url("/static/img/fondo2.png")50% fixed;
+  color:rgb(56, 8, 74);
+  font-family:monospace;
+  font-size: 20px;
+  
+  }
+.card{
+    background-color: rgba(255,255,255,0);
+    color:rgb(56, 8, 74);
+    margin:1%;
+    text-align:center;
+    justify-content:center;
+    place-items: center;
+    font-size: 18px;
+}
+.card h4{
+  color:rgb(56, 8, 74);
+    text-align:center;
+    min-width: none;
+    width: 100%;
+}
+.card img{
+
+    width:100%;
+    height:400px;
+    min-height: 250px;
+    min-width: 50%;
+
+}
+.row{
+  width: 100%;
+}
+
+</style>
+
+<body>
+    <div class="row">
+        <b  style="font-size: xx-large; color: rgba(66, 138, 219);margin-left: 40px;margin-top: 50px;" >Próximos Eventos</b>
+        <p  style="margin-left: 40px;"  >Noviembre 2024
+        </p>
+
+      <div class="col-md-1"></div>
+      
+
+      <div class="card col-md-3" style="padding: 0%">
+        <img class="card-img-top" src="{% static 'img/evento1.png' %}" alt="Card image cap">
+        <div class="card-body">
+            <a class="nav-link" href="{% url 'evento1' %}">Evento nocturno en Centro Santiago.</a>
+        </div>
+      </div>
+
+      <div class="card col-md-3" style="padding: 0%;">
+        <img class="card-img-top" src="{% static 'img/evento2.png' %}" alt="Card image cap">
+        <div class="card-body">
+            <a class="nav-link" href="{% url 'evento2' %}">Torneos Beyblade en La Florida</a>
+        </div>
+      </div>
+
+      <div class="card col-md-3"style="padding: 0%;">
+        <img class="card-img-top" src="{% static 'img/evento3.png' %}" alt="Card image cap">
+        <div class="card-body">
+            <a class="nav-link" href="{% url 'evento3' %}">Feria de ilustración, arte y diseño en Providencia</a>
+        </div>
+      </div>
+
+      <div class="col-md-1"></div>
+  
+    </div>
+</body>
+{%endblock%}

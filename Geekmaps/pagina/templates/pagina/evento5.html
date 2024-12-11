@@ -1,0 +1,45 @@
+{% extends "pagina/index.html" %}
+{% load static %}
+{%block content%}
+
+<style>
+
+body{
+  background: url("/static/img/fondo2.png")50% fixed;
+  color:rgb(56, 8, 74);
+  font-family:monospace;
+  font-size: 20px;
+  
+  }
+#informacion{
+    margin: 15px;
+}  
+#imagen{
+    margin: 40px;
+    margin-bottom: 100px;
+    height: 150px;
+    
+}
+</style>
+<body>
+    <div class="row"> 
+        <div id="imagen" class="col-md-6" >
+            <img class="card-img-top" src="{% static 'img/evento5.png' %}" alt="Card image cap"style="margin-bottom: 200px;">
+        </div>
+        <div id="informacion" class="col-md-5">
+            <h4>"Festigame"</h4>
+            
+            <ul>
+                <li>Fecha: 15,16 y 17 de Noviembre</li>
+                <li>Hora: 12:00 </li>
+                <li>Tipo de evento: Videojuegos</li>
+                <li>Entrada: De Pago</li>
+                <li>Dirección: Parque Estadio Nacional</li>
+                <li>Comuna: Ñuñoa</li>
+                <li>Organiza: Prisa Media</li>
+            </ul>
+        <div class="col-md-1"></div>
+        </div>
+
+</body>
+{%endblock%}

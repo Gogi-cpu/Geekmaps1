@@ -1,0 +1,64 @@
+{% extends "pagina/index.html" %}
+
+{%block content%}
+
+<style>
+
+    body{
+        background: url("/static/img/fondo.png")50% fixed;
+        color:rgb(0,0,0)
+        }
+    
+    #editarusuario{
+        font-family:Taviraj;
+        margin-top:100px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        background-color:rgba(83, 239, 244, 0.5);
+    }
+    form{
+        font-family:Taviraj;
+        border-radius:10px;
+        background-color:rgb(255, 255, 255, .5);
+        padding:15px;
+        font-size:20px;
+       
+    }
+    form h1{
+        margin-top: 10px;
+        text-align:center;
+        font-family:Taviraj;
+    }
+</style>
+
+
+
+
+<body>
+    
+    <div id="editarusuario"class="mb-3">
+        <h1>Modificar Usuarios</h1>
+        <form method="post" action="../usuario_editar">
+            {% csrf_token %}  
+            <label for="correo" class="form-label">Correo: </label><br>
+            <input type="email" class="form-control" id="correo" name="correo" value="{{usuario.correo}}" readonly/><br>
+
+            <label for="username" class="form-label">Nombre de usuario: </label><br>
+            <input type="text" class="form-control" id="username" name="username" value="{{usuario.username}} "/><br>
+
+            <label for="password" class="form-label">Contraseña: </label><br>
+            <input type="text" class="form-control" id="password" name="password" value="{{usuario.password}} "/><br>
+            
+            <label for="tipo" class="form-label">Tipo de usuario: </label><br>
+            <input type="text" class="form-control" id="tipo" name="tipo" value="{{usuario.tipo}} "/><br>
+
+            <input type="submit" class="btn btn-info" name="opcion" value="Modificar usuario">
+            <a href="{% url 'usuarioadmin' %}"><input type="button" class="btn btn-success"value="Volver al inventario"> </a>
+        </form>
+        
+    </div>
+
+</body>
+
+{%endblock%}
